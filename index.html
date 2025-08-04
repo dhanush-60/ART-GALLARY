@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallary</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
+
+    </script> 
+    
+    
+</head>
+<body>
+    <script> 
+    
+        var x = 1; 
+    
+        $(document).ready(function() { 
+    
+            $(window).resize(function() { 
+    
+                $("span").text(x += 1); 
+    
+            }); 
+    
+        }); 
+    
+    </script> 
+   
+    <section id="Home">
+        <nav>
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/8b/fc/dd/8bfcddd36e2eeea3e0c6018d10401289.jpg">
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Gallary">Top selling</a></li>
+                <li><a href="#Rating">Rating</a></li>
+                
+            </ul>
+
+            
+           <div class="container">
+              <button class="btn">
+                <a href="login.html">login</a>
+              </button>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+
+            </div>
+        </nav>
+
+    </section>
+
+    <!--home-->
+
+    <div class="home" id="Home">
+        <div class="home_main">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="https://images.pexels.com/photos/14474503/pexels-photo-14474503.jpeg?auto=compress&cs=tinysrgb&w=600" style="width: 100%; height: 50%;">
+                    
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://images.pexels.com/photos/2090652/pexels-photo-2090652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%; height: 50%;">
+                    
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=600" style="width:100%; height: 50%;">
+                    
+                </div>
+                
+                </div>
+                <br>
+                <div style="text-align:right">
+                    <span class="dot" ></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+                <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1}    
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+                </script>
+            </div>
+
+    </div>
+
+<!-- about-->
+<div class="about" id="About">
+    <div class="about_main">
+
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQ3wOLw4oKvEWclGubOh7GcmZ5mHBQvt3KA&usqp=CAU" >
+        </div>
+
+        <div class="about_text">
+            <h1><span>Art</span>Gallary</h1>
+            <h3>Call the Art Loss Register, ’cause you just stole my heart.</h3>
+            <p>
+                An art gallery is a space where visual art is displayed, allowing anyone interested in art to view and appreciate the works.Best quality
+            </p>
+        </div>
+
+    </div>
+
+</div>
+    <!--Menu-->
+
+    <div class="menu" id="Menu">
+        <h1>Our<span>gallary</span></h1>
+
+        <div class="menu_box">
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="https://d7hftxdivxxvm.cloudfront.net/?height=297&quality=80&resize_to=fill&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2FSvZm9xSK3ffzS8MhC57tPg%2Fmain.jpg&width=445">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Fine art</h2>
+                    <p>
+                        fine art is made primarily for aesthetics or creative expression, distinguishing it from decorative art or applied art, which also has to serve some practical function, such as pottery or most metalwork
+                    </p>
+                    <a href="fineart.html" class="menu_btn">Fine Art</a>
+                </div>
+
+            </div> 
+            
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="https://nenearts.in/cdn/shop/products/GreenLandOriginalHandmadeWatercolorPaintingForSale-NeneArts_1024x1024@2x.jpg?v=1620284360">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Land art</h2>
+                    <p>
+                        Land art, variously known as Earth art, environmental art, and Earthworks, is an art movement that emerged very first time in land art face natural Land art wall cladding for Interior
+                
+                    </p>
+                    <a href="landart.html" class="menu_btn">Land art</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="https://cdn.thestonestudio.in/wp-content/uploads/2023/05/WhatsApp-Image-2021-06-26-at-6.11.37-PM-1.webp">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Stone art</h2>
+                    <p>
+                    We are from Aamphaa Projects in koyembedu, We are giving the best price & quality & Service. Introducing for the very first time in STONE MURALS face natural stone wall cladding for Interior
+                    </p>
+                    <a href="stoneart.html" class="menu_btn">Stone art</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="https://i.etsystatic.com/40010666/r/il/ee153b/5830614865/il_600x600.5830614865_ljs0.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Religious art</h2>
+                    <p>
+                        The history of art is concerned more with religious buildings than with any other type, because in most past cultures the universal and exalted appeal of religion made the church or temple.
+                    </p>
+                    <a href="religiousart.html" class="menu_btn">Religious art</a>
+                </div>
+
+            </div> 
+
+        </div>
+
+    </div>
+
+<!--Gallary-->
+
+    <div class="gallary" id="Gallary">
+        <h1>Top<span>Selling</span></h1>
+
+        <div class="gallary_image_box">
+            <div class="gallary_image">
+                <img src="https://cdn.thestonestudio.in/wp-content/uploads/2023/01/5-feet-ganesh-statue-768x768.png">
+
+                <h3>Antique Statues</h3>
+                <P>abu black<br>25 inches(height),Width:30 inches
+                    Depth:  16 inches
+                    Weight:  220-260 Kgs approx<br>₹1,10,000</P>
+                <a href="payment.html" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="https://cdn.thestonestudio.in/wp-content/uploads/2021/10/2ft-Vintage-buddha-placement-768x768.png">
+
+                <h3>Buddha Statues</h3>
+                <P>marble stone<br>16 inches(height),Width:20 inches
+                    Depth:  15 inches
+                    Weight:  200-252 Kgs approx<br>₹1,55,000</P>
+                <a href="payment.html" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="https://cdn.thestonestudio.in/wp-content/uploads/2023/03/24-Wooden-Sitting-Lord-Ganesha.png">
+
+                <h3>Ganesha Statues</h3>
+                <P>wood material
+                    <br>26 inches(height),Width:21 inches
+                    Depth:  10 inches
+                    Weight:  150-200 Kgs approx<br>₹2,10,000</P>
+                <a href="payment.html" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="https://cdn.thestonestudio.in/wp-content/uploads/2023/05/1-feet-krishna-statue.png">
+
+                <h3>Garden Statues</h3>
+                <P>sandstone<br>25 inches(height),Width:40 inches
+                    Depth:  15 inches
+                    Weight:  250-300 Kgs approx<br>₹2,28,000</P>
+                
+                <a href="payment.html" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="https://cdn.thestonestudio.in/wp-content/uploads/2023/05/1-feet-vishnu-statue.png">
+
+                <h3>Hindu Statues</h3>
+                <P>Limestone<br>30 inches(height),Width:20 inches
+                    Depth:  26 inches
+                    Weight:  200-252 Kgs approx<br>
+                    ₹90,000
+                </P>
+                <a href="payment.html" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="https://cdn.thestonestudio.in/wp-content/uploads/2023/03/Angel-water-fountain.png">
+                <h3>Modern Statues</h3>
+                <P><br>34 inches(height),Width:20 inches
+                    Depth:  20 inches
+                    Weight:  250-300 Kgs approx<br>₹1,11,000</P>
+                <a href="payment.html" class="gallary_btn">Order Now</a>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <!--Review-->
+
+    <div class="review" id="Rating">
+        <h1>Customer<span>Rating</span></h1>
+
+        <div class="review_box">
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_1.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quam facere 
+                        blanditiis in fugiat tempore necessitatibus aliquid. Id adipisci, rem corrupti 
+                        asperiores distinctio delectus quae quia tenetur totam laboriosam quam. Lorem ipsum, 
+                        dolor sit amet consectetur adipisicing elit. Dolores soluta ullam ipsa voluptates 
+                        repudiandae dignissimos deleniti mollitia eum. Laudantium placeat velit nemo illo 
+                        pariatur. Fuga aperiam impedit illo atque repellendus!
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_2.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quam facere 
+                        blanditiis in fugiat tempore necessitatibus aliquid. Id adipisci, rem corrupti 
+                        asperiores distinctio delectus quae quia tenetur totam laboriosam quam. Lorem ipsum, 
+                        dolor sit amet consectetur adipisicing elit. Dolores soluta ullam ipsa voluptates 
+                        repudiandae dignissimos deleniti mollitia eum. Laudantium placeat velit nemo illo 
+                        pariatur. Fuga aperiam impedit illo atque repellendus!
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_3.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quam facere 
+                        blanditiis in fugiat tempore necessitatibus aliquid. Id adipisci, rem corrupti 
+                        asperiores distinctio delectus quae quia tenetur totam laboriosam quam. Lorem ipsum, 
+                        dolor sit amet consectetur adipisicing elit. Dolores soluta ullam ipsa voluptates 
+                        repudiandae dignissimos deleniti mollitia eum. Laudantium placeat velit nemo illo 
+                        pariatur. Fuga aperiam impedit illo atque repellendus!
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_4.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quam facere 
+                        blanditiis in fugiat tempore necessitatibus aliquid. Id adipisci, rem corrupti 
+                        asperiores distinctio delectus quae quia tenetur totam laboriosam quam. Lorem ipsum, 
+                        dolor sit amet consectetur adipisicing elit. Dolores soluta ullam ipsa voluptates 
+                        repudiandae dignissimos deleniti mollitia eum. Laudantium placeat velit nemo illo 
+                        pariatur. Fuga aperiam impedit illo atque repellendus!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Team-->
+
+    <div class="team">
+        <h1>Our<span>Patnernership</span></h1>
+
+        <div class="team_box">
+            <div class="profile">
+                <img src="image/chef1.png">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef2.png">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef3.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="profile">
+                <img src="image/chef3.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="profile">
+                <img src="image/chef3.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile">
+                <img src="image/chef4.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Footer-->
+
+    <footer>
+        <div align="center">
+        <h1>LOCATION</h1>
+        <div> 
+            <!-- Google Map Copied Code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.895576605132!2d77.66557019999999!3d11.415124900000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9699755561a47%3A0xb8c3c353be0ad19b!2sGovernment%20College%20of%20Engineering%2C%20Erode%20(IRTT%20%2FGCE-E)!5e0!3m2!1sen!2sus!4v1707402846928!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    
+            </iframe> 
+        </div>
+        <div class="footer_main">
+            <div class="footer_tag" >
+                <h2>Follows</h2>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+        </div>
+    </div>
+        <p class="end">@Copy 2024 ArtGallery<span><i class="fa-solid fa-face-grin"></i></span></p>
+
+    </footer>
+
+
+
+    
+</body>
+</html>
